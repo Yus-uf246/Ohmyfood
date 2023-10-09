@@ -1,0 +1,150 @@
+/* Background Image */
+.background {
+  position: relative;
+  z-index: -1;
+}
+
+.background img {
+  height: 34vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Main Container Styles */
+.menu {
+  background-color: var(--color-bckgrd);
+  border-radius: 40px 40px 0 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+}
+
+.menu__name {
+  max-width: 500px;
+  margin: auto;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8em;
+  margin-top: -3rem;
+  margin-bottom: 1.5rem;
+  padding-top: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__form {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Menu Styles and Animations */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section__title {
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  font-weight: 300;
+}
+
+.section__title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  width: 2rem;
+  height: 0.25rem;
+  background-color: var(--color-3);
+  transform-origin: left;
+  animation: section-accent 2000ms both;
+}
+
+.section__dish {
+  animation: dish-appear 2000ms both;
+}
+
+@keyframes section-accent {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes dish-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dish styles and animations */
+.dish {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dish__select {
+  display: none;
+}
+
+.dish__name {
+  padding: 10px;
+  width: 85%;
+  flex: none;
+  transition: width 2s ease-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+}
+
+.dish__price {
+  padding-bottom: 10px;
+  text-align: center;
+  align-self: flex-end;
+  margin: 0 auto;
+  width: 15%;
+  flex: none;
+}
+
+.dish__tick {
+  background-color: var(--color-3);
+  width: 15%;
+  flex: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dish__tick i {
+  color: var(--color-white);
+  transform: rotate(-540deg);
+  transition: transform 2s ease-out;
+}
+
+.dish:hover {
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.25);
+}
+
+.dish__select:checked ~ .dish__name {
+  width: 70%;
+}
+
+.dish__select:checked ~ .dish__tick i {
+  transform: rotate(0);
+}

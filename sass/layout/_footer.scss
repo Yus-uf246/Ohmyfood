@@ -1,27 +1,27 @@
 .footer {
-  background-color: var(--color-footer);
-  padding: 1.5em 0 2em 1.5em;
-  line-height: 1.5em;
+    background-color: var(--color-footer);
+    padding: 1.5em 0 2em 1.5em;
+    line-height: 1.5em;
 }
 
 .footer__logo {
-  /* uncomment out this line for specific width */
-  /* width: 5%; */
+    /* Uncomment this line if you want to set a specific width for the logo */
+    /* width: 5%; */
 }
 
 .footer * {
-  color: var(--color-white);
-  list-style: none;
+    color: var(--color-white);
+    list-style: none;
 }
 
 .footer img {
-  filter: invert(1);
-  width: 120px;
-  padding-bottom: 10px;
-  /* Uncomment out the line below if you want to set the width based on viewport width */
-  /* width: min(max(0.5rem, 2vw), 16px); */
+    filter: invert(1);
+    width: 120px;
+    padding-bottom: 10px;
+    /* Uncomment the following line if you want to set the width based on viewport width */
+    /* width: min(max(0.5rem, 2vw), 16px); */
 }
 
 .footer i {
-  width: 25px;
+    width: 25px;
 }
